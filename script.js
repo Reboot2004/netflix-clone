@@ -1,3 +1,4 @@
+console.log("Script.js loaded!");
 document.addEventListener('DOMContentLoaded', () => {
     const cookieBanner = document.createElement('div');
     cookieBanner.className = 'cookie-banner';
@@ -46,4 +47,51 @@ document.querySelectorAll('nav a').forEach(anchor => {
         });
     });
 });
+// Function to toggle full-screen mode
+function toggleFullScreen() {
+    var video = document.getElementById('bg-video');
+    if (!document.fullscreenElement && !document.webkitFullscreenElement &&
+        !document.mozFullScreenElement && !document.msFullscreenElement) {
+        if (video.requestFullscreen) {
+            video.requestFullscreen();
+        } else if (video.webkitRequestFullscreen) {
+            video.webkitRequestFullscreen();
+        } else if (video.mozRequestFullScreen) {
+            video.mozRequestFullScreen();
+        } else if (video.msRequestFullscreen) {
+            video.msRequestFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+    }
+}
 
+document.getElementById('bg-video').addEventListener('play', function () {
+    this.classList.add('playing');
+});
+
+document.getElementById('bg-video').addEventListener('pause', function () {
+    this.classList.remove('playing');
+});
+
+function initializePage() {
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+}
+
+document.addEventListener('DOMContentLoaded', initializePage);
