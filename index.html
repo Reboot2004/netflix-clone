@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Show + Tell</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -29,17 +29,18 @@
     </header>
 
     <section class="hero">
-        <div class="video-container">
+        <div class="hero-left">
+            <p class="static-text">A digital-first branding & web product agency expertly creating impactful experiences
+                for high-growth brands</p>
+        </div>
+        <div class="hero-right">
             <video autoplay muted loop id="bg-video">
                 <source src="1.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
+            <div class="video-mask"></div>
         </div>
-        <div class="hero-content">
-            <h2>We make every interaction count</h2>
-            <p>A digital-first branding & web product agency expertly creating impactful experiences for high-growth
-                brands</p>
-        </div>
+        <h2 class="animated-text">We make every interaction count</h2>
     </section>
 
     <meta name="description"
@@ -51,19 +52,21 @@
         <div class="project-container">
             <div class="project">
                 <img src="image-1.webp" alt="Optinet Project">
-                <h3>Embracing the Digital Age: Optinet's Quest for brand & digital Transformation</h3>
+                <p class="project-description">Embracing the Digital Age: Optinet's Quest for brand & digital
+                    Transformation</p>
             </div>
             <div class="project">
                 <img src="image-2.webp" alt="Berkeley Project">
-                <h3>Digital transformation for a leading office and interior company</h3>
+                <p class="project-description">Digital transformation for a leading office and interior company</p>
             </div>
             <div class="project">
                 <img src="image-3.webp" alt="Equinox Project">
-                <h3>Transforming Intellectual Property Management through Cutting-Edge Digital Innovation</h3>
+                <p class="project-description"> Transforming Intellectual Property Management through Cutting-Edge
+                    Digital Innovation</p>
             </div>
             <div class="project">
                 <img src="image-4.webp" alt="Atlas Ventures">
-                <h3>Pioneering Pathways: Atlas Venture's Digital Evolution in Biotech</h3>
+                <p class="project-description">Pioneering Pathways: Atlas Venture's Digital Evolution in Biotech</p>
             </div>
         </div>
     </section>
@@ -72,7 +75,7 @@
         <p>&copy; 2024 Show + Tell. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
