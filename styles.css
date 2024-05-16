@@ -232,3 +232,25 @@ footer {
         width: 100%;
     }
 }
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-icon {
+    font-size: 3rem;
+    color: white;
+}
+
+/* Hide the play icon when video is playing */
+#bg-video.playing+.video-overlay .play-icon {
+    display: none;
+}
